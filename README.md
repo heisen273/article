@@ -16,7 +16,7 @@ database_name=# \l
    Name    | Owner    | Encoding |   Collate   |    Ctype    | Access privileges
 -----------+----------+----------+-------------+-------------+-------------------
  db_name   | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 |
-(5 rows)
+(1 row)
 
 database_name=#
 ```

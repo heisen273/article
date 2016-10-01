@@ -74,7 +74,7 @@ Also, after this(case when you opened user remote access) you need to change lis
 listen_addresses='*'
 ```
 
-###### (!) And don't forget to restart the DB after you changed pg_hba.conf & postgresql.conf, otherwise changes won't be applied. 
+##### (!) And don't forget to restart the DB after you changed pg_hba.conf & postgresql.conf, otherwise changes won't be applied. 
 
 .
 

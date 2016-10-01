@@ -32,10 +32,10 @@ Then you'll need to do:
 ```python
 sudo -u postgres /usr/local/bin/createuser -U postgres -D -R -S readonly_user
 ```
-This command will create user with limited permissions. 
-Key -D means that this user cannot create db's; 
--R means  that this user cannot create any roles;
--S means that this user won't be superuser.
+This command will create database user with limited permissions. 
+###### Key -D means that this user cannot create db's; 
+###### -R means  that this user cannot create any roles;
+###### -S means that this user won't be superuser.
 
 Okay, so we got ourself a DB user, now lets give him Select permissions and login passwrd .
 ```python
@@ -74,7 +74,7 @@ Also, after this(case when you opened user remote access) you need to change lis
 listen_addresses='*'
 ```
 
-And don't forget to restart the DB after you changed pg_hba.conf & postgresql.conf, otherwise changes won't be applied. 
+###### (!) And don't forget to restart the DB after you changed pg_hba.conf & postgresql.conf, otherwise changes won't be applied. 
 
 .
 

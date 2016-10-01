@@ -69,7 +69,7 @@ Then, if you need to connect to DB using readonly user, – simply do
 psql -d database_name -U readonly_user
 ```
 
-Also, after this you need to change listen_address(by default its 'localhost') value inside postgresql.conf file:
+Also, after this(case when you opened user remote access) you need to change listen_address(by default its 'localhost') value inside postgresql.conf file:
 ```python
 listen_addresses='*'
 ```

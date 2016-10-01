@@ -76,9 +76,11 @@ listen_addresses='*'
 
 And don't forget to restart the DB after you changed pg_hba.conf & postgresql.conf, otherwise changes won't be applied. 
 
-
-
-
+.
+.
+.
+.
+.
 
 This specific guide gives client access to DataBase via DB  user. The idea is that you don't want to let the guy login onto your serv via ssh(using Unix user) and then login into DB using DataBase-user. 
 I believe this is more secure, cause who knows what is in his mind: you might end up with your server hang down even if he doesn't have superuser privelegies, – there are many ways to end up with such result.

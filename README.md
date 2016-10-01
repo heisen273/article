@@ -55,10 +55,19 @@ local database_name readonly_user md5
 ```
 And restart DB afterwards. 
 
+Please note, that if you want to open remote access to your database for specific IP, you'll need to add following line to your pg_hba.conf(where 10.10.10.10 is user's IP):
+```python
+host database_name readonly_user 10.10.10.10/32 md5
+```
+If you want to open remote access to ALL users from that specific IP adress, you'll need to simply add such kind of line to your pg_hba.conf file:
+```python
+host database_name all 10.10.10.10/32 md5
+```
+
 Then, if you need to connect to DB using readonly user, – simply do
 ```pythono
 psql -d database_name -U readonly_user
 ```
 
-
-
+This specific guide gives client access to DataBase via DB  user. The idea is that you don't want to let the guy login onto your serv via ssh(using Unix user) and then login into DB using DataBase-user. 
+I believe this is more secure, cause who knows what is in his mind: you might end up with your server hang down even if he doesn't have superuser privelegies, – there are many ways to end up with such result.

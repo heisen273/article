@@ -74,7 +74,7 @@ Also, after this you need to change listen_address(by default its 'localhost') v
 listen_addresses='*'
 ```
 
-And don't forget to restart the DB after you changed pg_hba.conf, otherwise changes won't be applied. 
+And don't forget to restart the DB after you changed pg_hba.conf & postgresql.conf, otherwise changes won't be applied. 
 
 
 

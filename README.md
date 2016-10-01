@@ -65,8 +65,13 @@ host database_name all 10.10.10.10/32 md5
 ```
 
 Then, if you need to connect to DB using readonly user, – simply do
-```pythono
+```python
 psql -d database_name -U readonly_user
+```
+
+Also, after this you need to change listen_address(by default its 'localhost') value inside postgresql.conf file:
+```python
+listen_addresses='*'
 ```
 
 And don't forget to restart the DB after you changed pg_hba.conf, otherwise changes won't be applied. 
